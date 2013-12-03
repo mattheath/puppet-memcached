@@ -11,6 +11,11 @@ class Libmemcached < Formula
   def install
     ENV.append_to_cflags "-undefined dynamic_lookup" if MacOS.version == :leopard
 
+    if MacOS.version > :mountain_lion
+      ENV.append 'CXXFLAGS', "-I#{MacOS.sdk_path}/usr/include/c++/4.2.1"
+      ENV.append 'LIBS', "#{MacOS.sdk_path}/usr/lib/libstdc++.dylib"
+    end
+
     system "./configure", "--prefix=#{prefix}"
     system "make install"
   end
