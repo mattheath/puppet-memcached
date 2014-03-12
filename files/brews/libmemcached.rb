@@ -2,9 +2,9 @@ require 'formula'
 
 class Libmemcached < Formula
   homepage 'http://libmemcached.org'
-  url 'https://launchpad.net/libmemcached/1.0/1.0.17/+download/libmemcached-1.0.17.tar.gz'
-  sha1 '1023bc8c738b1f5b8ea2cd16d709ec6b47c3efa8'
-  version '1.0.17-boxen1'
+  url 'https://launchpad.net/libmemcached/1.0/1.0.15/+download/libmemcached-1.0.15.tar.gz'
+  sha1 'd49ceec8efcc13c2a6ab15416d9caeeeeaa49a48'
+  version '1.0.15-boxen1'
 
   depends_on 'memcached'
 
